@@ -1,0 +1,16 @@
+body {
+  margin:0;
+  /* background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%); */
+}   
+
+img {
+  margin:0 10%;
+}
+
+#box {
+  width:60%;
+  height:10vh;
+  margin:0 20%;
+  font-size:2.5em;
+  font-weight: 500;
+}
