@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+*{
+margin:0; padding:0;
+font-family:'Do Hyeon', sans-serif;
+color:#49525c;
+}
+
+body{padding:20px; width:100%; margin:0 auto;
+    background:#ffffff;
+    overflow:auto;
+    overflow-x: hidden;}
+
+select {
+    width: 500px; 
+    padding: .8em .5em;
+    letter-spacing: 7px;
+    font-size:3em;
+    background: url('../images/dropdown.png') no-repeat 95% 50%; /* 네이티브 화살표를 커스텀 화살표로 대체 */
+    border: 1px solid rgb(139, 138, 138);
+    border-radius: 0px;
+    -webkit-appearance: none; /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#cur_title{
+    color:#667eea;
+    letter-spacing: 7px;
+    font-size:5em; 
+     
+}
+
+h3{
+    letter-spacing: 7px;
+    font-weight: bold;
+    font-size:4em;    
+}
+
+.info_title{
+    font-size:1.7em;
+    font-style: italic;
+    font-weight: bold;
+}
+p{
+    font-size:0.7em;
+}
+#calculator > h3 {
+    letter-spacing: 7px;
+    font-size:5em;  
+}
+
+
+#calculator > input{
+    display:none;
+}
+
+label{
+    display:inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-size:2em;
+    letter-spacing:5px;
+    font-weight: bold;
+    text-align: center;
+    color : #764ba2;
+    border-bottom:3px solid #764ba2;
+}
+
+lable:hover {
+    color:#ffffff;
+    background-color: #764ba2;
+    cursor:pointer;
+}
+#calculator > input:checked+label{
+    color: #ffffff;
+    background-color:#764ba2;
+
+}
+
+#cal_box{
+    display: inline-block;
+}
+
+#cal_box > h5, #cal_box > h3{
+    font-size:2em;
+    letter-spacing: 3px;
+}
+#converter {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    font-size:3em;
+}
+#converter h1{
+    text-align: center;
+}
+.con input{
+    margin: 30px 10px;
+    border: 1px solid black;
+    width: 90%;
+    font-size:0.8em;
+}
+
+#footer{
+    height:300px;
+}
+
+
+.navbar{
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+    z-index:1000;
+    
+    width: 100%;
+    overflow: hidden;
+	
+	
+	will-change:transform;
+	transform: translateZ(0);
+	
+	display:flex;	
+	
+	
+	
+	box-shadow: 0 -2px 5px -2px #333;
+    background: radial-gradient(circle closest-corner at 50%, #667eeafb, #764ba2fb);
+}
+.navbar div{
+        width: 25%; 
+        height: 100%;      
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+}
+
+
+.navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+
+.navbar i{
+    font-size: 3.5em;
+    width:100%;
+    color:white;
+}
+.navbar span{
+    width: 100%;;
+}
+  
+
+.navbar div:nth-child(3) > a{
+    background-color: rgb(39, 37, 37);
+}
+  
+  
+
+/*pc화면*/
+@media screen and (min-width:1025px){
+
+    body{width:980px;
+           margin:0 auto;
+           border:1px solid lightgray;
+           border-radius:5px}
+
+    select {
+    width: 300px; 
+    padding: .8em .5em;
+    letter-spacing: 7px;
+    font-size:1em;
+    background: url('../images/dropdown.png') no-repeat 95% 50%; /* 네이티브 화살표를 커스텀 화살표로 대체 */
+    border: 1px solid rgb(139, 138, 138);
+    border-radius: 0px;
+    -webkit-appearance: none; /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+    }
+    #cur_title{
+        color:#667eea;
+        letter-spacing: 7px;
+        font-size:4em; 
+         
+    }
+    h3{
+        letter-spacing: 7px;
+        font-weight: bold;
+        font-size:2.5em;    
+    }
+    
+    .info_title{
+        font-size:1.5em;
+        font-style: italic;
+        font-weight: bold;
+    }
+    p{
+        font-size:1.3em;
+    }
+  
+    .navbar{
+      position:fixed;
+      display: block;
+      left: 20px;
+      top:20px;
+      width: 200px;
+      height:200px;
+  
+    }
+    .navbar div{
+      display: block;
+      width: 100%;
+      height:25%;
+      overflow: hidden;
+    }
+    
+    .navbar a {
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      color: white;
+      text-decoration: none;
+      font-size: 0.7em;
+    }
+    
+    
+    .navbar i{
+      font-size: 3.5em;
+      width:20%;
+      color:white;
+    }
+    .navbar span{
+      width: 80%;
+    }
+  }
+  
+
+  
+
+
+
+

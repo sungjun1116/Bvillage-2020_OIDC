@@ -1,12 +1,13 @@
 const express = require('express')
 const app = express()
-const port = 4000
+const port = 3000
 const compression = require('compression')
 const helmet = require('helmet')
 const bodyParser = require('body-parser')
 const indexRouter = require('./routes/index')
 const cityRouter = require('./routes/city')
 const exchangeRouter = require('./routes/exchange')
+const communityRouter = require('./routes/community')
 
 // Using static file service
 app.use(express.static('public'))
@@ -20,6 +21,7 @@ app.use(helmet())
 app.use('/', indexRouter);
 app.use('/city', cityRouter);
 app.use('/exchange', exchangeRouter);
+app.use('/community', communityRouter);
 
 
 // Error Handling

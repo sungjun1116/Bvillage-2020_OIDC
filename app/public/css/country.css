@@ -1,53 +1,28 @@
-html, body {
-  margin: 0;
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+*{
+margin:0; padding:0;
+font-family:'Do Hyeon', sans-serif;
+color:#49525c;
 }
 
-.mobile-container {
-  max-width: 480px;
-  margin: auto;
-  height: 100vh;
-  background-color: white;
-  border-radius: 10px;
-  overflow: auto;
-  color:#717E8E;
+#time{
+  vertical-align: center;
+  text-align: center;
+}
+.showTime{
+  display: inline-block;
+  margin:20px;
+  font-size:3em;
+  color:#764ba2;
+}
+.vl{
+  display: inline-block;
+  border-right:3px solid #764ba2;
+  height: 120px;
 }
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-}
 
-.active {
-  background: radial-gradient(circle closest-corner at 50%, #667eea, #764ba2);
-  color: white;
-}
-
-.topnav #myLinks {
-  display: none;
-}
-
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-}
 
 .content {
   width: 80%;
@@ -60,14 +35,134 @@ html, body {
   font-size: 1em;
   margin-bottom:20px;
 }
-
-li a {
-  font-weight:bold;
+ul {
+  list-style:none;
+  margin: 10px;
+}
+#news_title{
+  color:#4f5257;
+}
+li{
+  padding:10px;
+  color:#49525c;
+  font-size: 1em;
+  margin-bottom: 10px;
+  border-bottom:1px solid #49525c;
+}
+li a {  
+  color:#49525c;
   text-decoration:none;
-  color:#717E8E;
 }
 
 li a:hover {
    text-decoration:underline; 
    color: #1e88e5;
+}
+
+#footer{
+  height:300px;
+}
+
+
+.navbar{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+z-index:1000;
+  
+width: 100%;
+overflow: hidden;
+
+
+will-change:transform;
+transform: translateZ(0);
+
+display:flex;	
+
+
+
+box-shadow: 0 -2px 5px -2px #333;
+  background: radial-gradient(circle closest-corner at 50%, #667eeafb, #764ba2fb);
+}
+
+.navbar div{
+  width: 25%;
+  height: 100%;    
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+
+.navbar i{
+  font-size: 3.5em;
+  width:100%;
+  color:white;
+}
+.navbar span{
+  width: 100%;;
+}
+
+
+.navbar div:nth-child(2) > a{
+  background-color: rgb(39, 37, 37);
+}
+
+/*pc화면*/
+@media screen and (min-width:1025px){
+
+  body{width:980px;
+		 margin:0 auto;
+		 border:1px solid lightgray;
+     border-radius:5px}
+     
+     li{
+      font-size:2em;
+    }
+
+  .navbar{
+    position:fixed;
+    display: block;
+    left: 20px;
+    top:20px;
+    width: 200px;
+    height:200px;
+
+  }
+  .navbar div{
+    display: block;
+    width: 100%;
+    height:25%;
+    overflow: hidden;
+  }
+  
+  .navbar a {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.7em;
+  }
+  
+  
+  .navbar i{
+    font-size: 3.5em;
+    width:20%;
+    color:white;
+  }
+  .navbar span{
+    width: 80%;
+  }
 }

@@ -15,13 +15,14 @@ router.get('/', (req, res) => {
       <link rel="stylesheet" type="text/css" href="/css/index.css">
     </head>
     <body>
-      <img src="/images/Bvillage.jpg" style="width:80%; display:block; margin-top:20%">
+      <img src="/images/Bvillage.jpg" style="">
       <form action="/city/enter" method="post">
       <p>
         ${template.citySelect()}
       </p>
+      <p style="font-size:2em">거주하는 곳을 선택하세요</p>
       <p>
-        <input type="submit" value="도시 선택" style="width:40%;height:20%;font-size:30px;margin:10% 30%;">
+        <input id="go" type="submit" value="G   O" >
       </p>
     </form>
     </body>

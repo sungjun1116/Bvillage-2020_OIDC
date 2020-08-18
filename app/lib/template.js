@@ -21,31 +21,28 @@ exports.HTML = (filteredCity, time, news) => {
   <!doctype html>
   <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>B-village - Information</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!-- open souce CDN -->
     <link rel="stylesheet" type="text/css" href="/css/country.css">
   </head>
     <body>
-     <!-- Simulate a smartphone / tablet -->
-      <div class="mobile-container">
-      <!-- Top Navigation Menu -->
-        <div class="topnav">
-          <a href="/city/${filteredCity}" class="active">Information</a>
-          <div id="myLinks">
-            <a href="/community">Community</a>
-            <a href=/exchange/?id=${cityId}>Exchange Rate</a>
-            <a href="/">Home</a>
-          </div>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-        </div>
+     
         <div style="padding-left:16px">
           ${time}
           ${news}
-        </div>
-        <!-- End smartphone / tablet look -->
-      </div>       
+        </div>       
+      
+      <div id="footer"></div>
+        <section id="bottom_nav">
+          <div class="navbar">
+          <div><a class="active" href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></div>
+          <div><a class="active" href="#"><i class="fa fa-info" aria-hidden="true"></i> Information</a></div>
+          <div><a class="active" href="/exchange/?id=${cityId}" ><i class="fa fa-usd" aria-hidden="true"></i> Exchange Rate</a></div>
+          <div><a class="active" href="/community"><i class="fa fa-users" aria-hidden="true"></i> Community</a></div>
+                       
+          
+          </div>
+        </section>    
       <script>
         function myFunction() {
           var x = document.getElementById("myLinks");
@@ -68,7 +65,7 @@ exports.news = urlParse => {
   while (i < urlParse.length) {
     list = list + `<li>[Category: ${urlParse[i].category}]
     <a href="${urlParse[i].url}" target="blank">
-    <p>${urlParse[i].title}</p></a></li>
+    <p id="news_title">${urlParse[i].title}</p></a></li>
     `;
     i = i + 1;
   }
@@ -123,8 +120,8 @@ exports.time = city_id => {
 
   country = moment.tz(newId).format('YYYY-MM-DD HH:mm');
   korea = moment.tz('Asia/Seoul').format('YYYY-MM-DD HH:mm');
-  tag = `<p style="display: inline-block; margin-right:15%; font-size:1em;" >${idSplit[1]} 시각<br>${country}</p>
-  <p style="display: inline-block;font-size:1em;"> 한국(Seoul) 시각<br>${korea}</p>`;
+  tag = `<div id="time"><p class='showTime'>${idSplit[1]} 시각<br>${country}</p>
+  <div class="vl"></div><p class='showTime'> 한국(Seoul) 시각<br>${korea}</p></div>`;
 
   return `${tag}`
 }
