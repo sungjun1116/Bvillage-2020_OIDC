@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 4000
 const compression = require('compression')
 const helmet = require('helmet')
 const bodyParser = require('body-parser')
