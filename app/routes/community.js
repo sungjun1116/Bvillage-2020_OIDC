@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
       </head>
       <body>
       
-      <iframe src="http://101.101.217.192:8080/BBS" frameborder="0"></iframe>
+      <iframe src="http://localhost:8080/BBS/main.jsp" frameborder="0"></iframe>
       
       
       
