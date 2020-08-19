@@ -4,6 +4,7 @@ const cheerio = require('cheerio')
 const moment = require('moment-timezone')
 
 
+// 도시정보, 시간정보, 뉴스정보 모두를 취합해서 구성한 HTML page 
 exports.HTML = (filteredCity, time, news) => {
   let cityId;
   if (filteredCity === 'Asia - Shanghai') {
@@ -58,21 +59,8 @@ exports.HTML = (filteredCity, time, news) => {
     `;
 }
 
-exports.news = urlParse => {
-  let list = '<ul>';
-  let i = 0;
 
-  while (i < urlParse.length) {
-    list = list + `<li>[Category: ${urlParse[i].category}]
-    <a href="${urlParse[i].url}" target="blank">
-    <p id="news_title">${urlParse[i].title}</p></a></li>
-    `;
-    i = i + 1;
-  }
-  list = list + '</ul>';
-  return list;
-}
-
+// news url 에서 title, content, category를 따로 parsing하여 사용하는 기능
 exports.getUrl = url => {
   return new Promise(resolve => {
     request(url, (err, res, body) => {
@@ -97,6 +85,25 @@ exports.getUrl = url => {
   })
 }
 
+
+// 뉴스 정보 제공
+exports.news = urlParse => {
+  let list = '<ul>';
+  let i = 0;
+
+  while (i < urlParse.length) {
+    list = list + `<li>[Category: ${urlParse[i].category}]
+    <a href="${urlParse[i].url}" target="blank">
+    <p id="news_title">${urlParse[i].title}</p></a></li>
+    `;
+    i = i + 1;
+  }
+  list = list + '</ul>';
+  return list;
+}
+
+
+// index page의 도시선택 부분 
 exports.citySelect = () => {
   let tag = '';
   let i = 0;
@@ -112,6 +119,7 @@ exports.citySelect = () => {
       `
 }
 
+// 해당하는 도시정보를 받아서 한국과 현지시각을 비교해주는 부분
 exports.time = city_id => {
   const newId = city_id.replace(' - ', '/');
   const idSplit = newId.split('/')

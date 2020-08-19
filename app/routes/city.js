@@ -3,18 +3,21 @@ const express = require('express')
 const router = express.Router()
 const path = require('path')
 const request = require('request')
-const cheerio = require('cheerio')
+const cheerio = require('cheerio')  // Crawlling 관련 module
 const template = require('../lib/template')
 
+// 선택한 도시정보를 사용해 redirect하는 page
 router.post('/enter', (req, res, next) => {
   const post = req.body;
   const city = post.city;
   res.redirect(`/city/${city}`);
 });
 
-
+// 선택한 도시정보에 해당하는 information page
 router.get('/:pageId', function (req, res, next) {
   const filteredCity = path.parse(req.params.pageId).base
+
+  // 'https://news.daum.net'에서 new url만 뽑아서 처리
   const crawllingByNewsHome = () => {
     request('https://news.daum.net/', async function (error, response, body) {
       const $ = cheerio.load(body);

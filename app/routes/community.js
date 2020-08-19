@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router()
 
 
-
+// Get community page
 router.get('/', (req, res) => {
   const html = `
     <!doctype html>
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
       </head>
       <body>
       
-      <iframe src="http://localhost:8080/BBS/main.jsp" frameborder="0"></iframe>
+      <iframe src="http://101.101.217.192/BBS/main.jsp" frameborder="0"></iframe>
       
       
       
