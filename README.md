@@ -1,6 +1,7 @@
 # Bvillage-2020_OIDC
 - It is the source code of bvillage, a web application for international student.
 - The installation will explain how to test in the local environment, and if the public IP address is leaked, security problems can be accrued. It will be provided to the OIDC in a different way later if necessary.
+- Both Mobile and Desktop can be run, but if you want to see a more optimized screen, it is recommended to connect in the mobile environment.
 
 # Installation
 You need node.js for the test. <https://nodejs.org/en/download/>
