@@ -21,7 +21,7 @@ If 'pm2'(package manager for node.js) is installed, the following code is also p
 # Browser Support
 - Latest version of Chrome browser is OK.
 - Latest version of Firefox browser is OK.
-- Latest version of Firefox browser is OK.
+- Latest version of Whale browser is OK.
 - Latest version of Microsoft browser has problems with some css layout functions.
 - Internet Explorer browser has problems with some css layout functions and displaying Google charts.
 
