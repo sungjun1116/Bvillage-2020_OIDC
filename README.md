@@ -26,7 +26,4 @@ If 'pm2'(package manager for node.js) is installed, the following code is also p
 - Latest version of Microsoft Edge browser has problems with some css layout functions.
 - Internet Explorer browser has problems with some css layout functions and displaying Google charts.
 
-#### Additional guide
-In the course of development, We developed the back-end part of the community page as JSP to optimize security. 
 
-The relevant code is located in the following repository:<https://github.com/sungjun1116/Bvillage-2020_OIDC2>
