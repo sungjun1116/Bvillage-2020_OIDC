@@ -9,8 +9,9 @@ const template = require('../lib/template')
 // 선택한 도시정보를 사용해 redirect하는 page
 router.post('/enter', (req, res, next) => {
   const post = req.body;
-  const city = post.city;
-  res.redirect(`/city/${city}`);
+  // const city = post.city;
+  // res.redirect(`/city/${city}`);
+  res.send(`${post}`);
 });
 
 // 선택한 도시정보에 해당하는 information page
@@ -33,7 +34,6 @@ router.get('/:pageId', function (req, res, next) {
       let urlParse = [];
       for (let url of newsArr) {
         urlParse.push(await template.getUrl(url));
-
       }
 
       const time = template.time(filteredCity);
