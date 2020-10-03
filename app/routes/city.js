@@ -10,7 +10,7 @@ const template = require('../lib/template')
 router.post('/enter', (req, res, next) => {
   const post = req.body;
   const ex = post.ex;
-  res.send(`됬다 이자식아: ${sung}`);
+  res.send(`됬다 이자식아: ${ex}`);
 });
 
 // router.get('/ex', (req, res, next) => {
