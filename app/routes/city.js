@@ -10,12 +10,12 @@ const template = require('../lib/template')
 router.post('/enter', (req, res, next) => {
   const post = req.body;
   const ex = post.ex;
-  res.redirect(`/city/${ex}`);
+  res.send(`됬다 이자식아: ${sung}`);
 });
 
-router.get('/ex', (req, res, next) => {
-  res.send("안녕하세요")
-});
+// router.get('/ex', (req, res, next) => {
+//   res.send("안녕하세요")
+// });
 
 // 선택한 도시정보에 해당하는 information page
 router.get('/:pageId', function (req, res, next) {
