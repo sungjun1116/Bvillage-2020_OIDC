@@ -9,9 +9,8 @@ const template = require('../lib/template')
 // 선택한 도시정보를 사용해 redirect하는 page
 router.post('/enter', (req, res, next) => {
   const post = req.body;
-  // const city = post.city;
-  // res.redirect(`/city/${city}`);
-  res.send(`${post}`);
+  const ex = post.ex;
+  res.redirect(`/city/${ex}`);
 });
 
 // 선택한 도시정보에 해당하는 information page
