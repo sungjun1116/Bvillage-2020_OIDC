@@ -5,6 +5,7 @@ const compression = require('compression')
 const helmet = require('helmet')
 const bodyParser = require('body-parser')
 const indexRouter = require('./routes/index')
+const postRouter = require('./routes/post')
 const cityRouter = require('./routes/city')
 const exchangeRouter = require('./routes/exchange')
 const communityRouter = require('./routes/community')
@@ -19,6 +20,7 @@ app.use(helmet())
 
 // Router
 app.use('/', indexRouter);
+app.use('/post', postRouter);
 app.use('/city', cityRouter);
 app.use('/exchange', exchangeRouter);
 app.use('/community', communityRouter);
