@@ -5,7 +5,7 @@ const router = express.Router()
 router.post('/', (req, res, next) => {
   const post = req.body;
   // const city = post.city;
-  res.send(`성공했다 이자식아: ${post}`);
+  res.redirect(`/city/America - Los_Angeles`);
 });
 
 module.exports = router;
