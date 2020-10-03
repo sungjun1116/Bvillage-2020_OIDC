@@ -13,6 +13,10 @@ router.post('/enter', (req, res, next) => {
   res.redirect(`/city/${ex}`);
 });
 
+router.get('/ex', (req, res, next) => {
+  res.send("안녕하세요")
+});
+
 // 선택한 도시정보에 해당하는 information page
 router.get('/:pageId', function (req, res, next) {
   const filteredCity = path.parse(req.params.pageId).base
