@@ -16,7 +16,7 @@ router.get('/', function (req, res) {
   const urlApi = 'https://www.koreaexim.go.kr/site/program/financial/exchangeJSON';
 
   //발급키
-  const key = 'VetZYnrCBpsNBsrE8wbziEue3huMrUfk';
+  const key = '';
 
   let api_url = `${urlApi}?authkey=${key}`;
   //let api_url = urlApi+ '?authkey=' + key + '&searchdate=' + searchDate+ '&data=' +data;
